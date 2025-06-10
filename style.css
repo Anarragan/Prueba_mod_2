@@ -1,0 +1,370 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+/*fondo animado*/
+body{
+    font-family: 'Roboto';
+    font-size: 18px;
+    line-height: 1.5;
+    background-image: url("/imagenes/WANEELLA\ pixel\ art.gif");
+    background-size: cover;
+    background-position: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+/*section main*/
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    background-color: black;
+    opacity: 0.8;
+    height: 8vh;
+    justify-content: center;
+}
+
+/*quita la decoracion de los a elements*/
+.cont_inicio a{
+    text-decoration: none;
+    color: white;
+}
+
+
+.barra{
+    display: flex;
+    align-items: center;
+    gap: 50vw;
+}
+
+main{
+    display: flex;
+    height: 85vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.navegacion ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 3vw;
+}
+
+.navegacion a:hover{
+    text-decoration: none;
+    color: white;
+    background-color: orangered;
+    padding: 8px 16px;
+    border: 2px solid white;
+    transition: 0.5s;
+    border-radius: 15px;
+    box-shadow: black;
+}
+
+.textos_header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*section presentation*/
+
+.head{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    background-color: black;
+    opacity: 0.9;
+    height: 8vh;
+    justify-content: center;
+}
+
+.presentacion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 10vh;
+    padding: 20%;
+}
+
+.textos_presentacion{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+}
+
+.presentacion img{
+    border-radius: 50%;
+    width: 20vh;
+    box-shadow: 0 0 4px 4px orangered;
+}
+
+
+/*section projetcs*/
+
+.cabeza{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    background-color: black;
+    opacity: 0.8;
+    height: 8vh;
+    justify-content: center;
+}
+
+.proyects{
+    display: grid;
+    grid-template-columns: repeat(3, 4fr);
+    height: 50vh;
+    width: 100vw;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    text-align: center;
+}
+
+.proyects img{
+    width: 30vh;
+    border-radius: 15px;
+}
+
+.proyects img:hover{
+    transition: 0.5s;
+    border-radius: 15px;
+    box-shadow: 0 0 7px 7px rgb(235, 90, 38);
+}
+
+.pro_1 .pro_2 .pro_3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10%;
+}
+
+
+
+/*Section contact*/
+
+.contact form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-radius: 15px;
+}
+
+legend{
+    font-size: 35px;
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+    padding-top: 60px;
+    padding-bottom: 10px;
+    width: 100%;
+    display: block;
+    font-weight: bold;
+}
+
+input {
+    display: flex;
+    padding: 10px;
+    border: 2px solid #717275;
+    border-radius: 20px;
+    font-size: 16px;
+    background-color: #f5f5f5;
+    margin-bottom: 35px;
+    width: 80vh;
+}
+
+textarea{
+    display: flex;
+    padding: 10px;
+    border: 2px solid #717275;
+    border-radius: 20px;
+    font-size: 16px;
+    background-color: #f5f5f5;
+    margin-bottom: 35px;
+    width: 80vh;
+}
+
+button{
+    background-color: orangered;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    transition: background-color 0.3s ease;
+    width: 80vh;
+}
+
+/*footer for all*/
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    opacity: 0.9;
+    color: white;
+}
+
+footer a{
+    text-decoration: none;
+}
+
+/*para tablets*/
+@media (max-width: 768px) {
+
+    /*presentation*/
+    .barra{
+        gap: 20vh;
+    }
+
+    .barra h1{
+        font-size: 21px;
+    }
+
+    /*proyectos*/
+    .proyects{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 35vh;
+        gap: 5vh;
+    }
+
+    /*contact*/
+    legend{
+        font-size: 30px;
+        color: white;
+        text-align: center;
+        margin-bottom: 20px;
+        padding-top: 60px;
+        padding-bottom: 10px;
+        font-weight: bold;
+    }
+    
+    input {
+        display: flex;
+        font-size: 16px;
+        width: 55vh;
+    }
+    
+    textarea{
+        display: flex;
+        font-size: 16px;
+        width: 55vh;
+    }
+    
+    button{
+        background-color: orangered;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        width: 55vh;
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+}
+
+
+/*smartphones*/
+@media (max-width: 480px) {
+
+    /*para inicio*/
+    .cont_inicio{
+        flex-direction: column;
+        align-items: center;
+    }
+    .barra{
+        gap: 20vw;
+    }
+    .barra h1{
+        font-size: 20px;
+    }
+
+    .navegacion ul{
+        flex-direction: row;
+        gap: 10px;
+        padding: 10px 0;
+        font-size: 12px;
+    }
+
+    .textos_header{
+        padding: 5vw;
+    }
+
+    /*para about*/
+
+    .presentacion{
+        flex-direction: column;
+    }
+
+
+    /*para projects*/
+
+    .proyects{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 35vh;
+        gap: 5vh;
+    }
+
+
+    /*para form*/
+    legend{
+        font-size: 20px;
+        color: white;
+        text-align: center;
+        margin-bottom: 20px;
+        padding-top: 60px;
+        padding-bottom: 10px;
+        width: 100%;
+        font-weight: bold;
+    }
+    
+    input {
+        display: flex;
+        font-size: 16px;
+        width: 30vh;
+    }
+    
+    textarea{
+        display: flex;
+        font-size: 16px;
+        width: 30vh;
+    }
+    
+    button{
+        background-color: orangered;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        width: 30vh;
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+}
+
